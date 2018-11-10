@@ -221,6 +221,18 @@ public extension UILabel {
 }
 
 
+public extension NSAttributedString {
+    convenience init(icon: FAType, iconSize: CGFloat) {
+        FontLoader.loadFontIfNeeded()
+
+        let iconFont = UIFont(name: FAStruct.FontName, size: iconSize)!
+        let iconAttribute = [NSAttributedStringKey.font : iconFont]
+
+        self.init(string: icon.text!, attributes: iconAttribute)
+    }
+}
+
+
 // Original idea from https://github.com/thii/FontAwesome.swift/blob/master/FontAwesome/FontAwesome.swift
 public extension UIImageView {
 
