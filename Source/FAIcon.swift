@@ -223,7 +223,7 @@ public extension NSAttributedString {
         FontLoader.loadFontIfNeeded()
 
         let iconFont = UIFont(name: FAStruct.FontName, size: iconSize)!
-        let iconAttribute = [NSAttributedStringKey.font : iconFont]
+        let iconAttribute = [NSAttributedString.Key.font : iconFont]
 
         self.init(string: icon.text!, attributes: iconAttribute)
     }
